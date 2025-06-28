@@ -20,7 +20,16 @@ def get_user_guess():
         except ValueError:
             print("Invalid input! Please enter a number.")
             
-response = get_random_response()
-guess= get_user_guess()
-print(response)
-print(guess)
+def display_response(response):
+    print("\nThe Magic 8-Ball says: ", response, "\n")
+
+def play_again():
+    while True:
+        choice=input("Do you want to ask another quetion-yes, no? ").strip().lower()
+        if choice=="yes":
+            return True
+        elif choice=="no":
+            print("Thanks for playing! Goodbye!")
+            return False
+        else:
+            print("Pleasw type 'yes', or 'no'.")
