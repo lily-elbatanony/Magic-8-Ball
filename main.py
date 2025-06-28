@@ -33,3 +33,14 @@ def play_again():
             return False
         else:
             print("Pleasw type 'yes', or 'no'.")
+def magic_8_ball():
+    print("Welcome to the Magic 8-Ball!")
+    while True:
+        question=get_user_guess()
+        if question is None:
+            break
+        response=get_random_response()
+        display_response(response)
+        if not play_again():
+            break
+magic_8_ball()
