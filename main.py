@@ -22,3 +22,14 @@ def get_user_guess():
             
 def display_response(response):
     print("\nThe Magic 8-Ball says: ", response, "\n")
+
+def play_again():
+    while True:
+        choice=input("Do you want to ask another quetion-yes, no? ").strip().lower()
+        if choice=="yes":
+            return True
+        elif choice=="no":
+            print("Thanks for playing! Goodbye!")
+            return False
+        else:
+            print("Pleasw type 'yes', or 'no'.")
