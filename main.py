@@ -20,3 +20,7 @@ def get_user_guess():
         except ValueError:
             print("Invalid input! Please enter a number.")
             
+response = get_random_response()
+guess= get_user_guess()
+print(response)
+print(guess)
